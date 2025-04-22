@@ -1,0 +1,412 @@
+
+
+
+TEST_MIXER VERIFY
+
+Downloading oyaml-1.0-py2.py3-none-any.whl (3.0 kB)
+Downloading prettytable-3.10.0-py3-none-any.whl (28 kB)
+Downloading PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (705 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.5/705.5 kB 1.8 MB/s eta 0:00:00
+Downloading rich-13.7.1-py3-none-any.whl (240 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.7/240.7 kB 1.6 MB/s eta 0:00:00
+Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 3.0 MB/s eta 0:00:00
+Downloading pygments-2.18.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 1.6 MB/s eta 0:00:00
+Downloading find_libpython-0.4.0-py3-none-any.whl (8.7 kB)
+Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Building wheels for collected packages: python-constraint
+  Building wheel for python-constraint (pyproject.toml) ... done
+  Created wheel for python-constraint: filename=python_constraint-1.4.0-py2.py3-none-any.whl size=24060 sha256=7ba3a2b2ac33315865622ea44cd9bb5bc137121ae16915faf432477e44d38dd9
+  Stored in directory: /tmp/pip-ephem-wheel-cache-i2vkm6n5/wheels/2e/f2/2b/cb08b5fe129e4f69b7033061f256e5c551b0aa1160c2872aee
+Successfully built python-constraint
+Installing collected packages: wcwidth, python-constraint, find-libpython, tabulate, six, PyYAML, pygments, PrettyTable, mdurl, cocotb, click, oyaml, markdown-it-py, cocotb-coverage, anytree, rich, caravel-cocotb
+Successfully installed PrettyTable-3.10.0 PyYAML-6.0.1 anytree-2.12.1 caravel-cocotb-1.2.4 click-8.1.7 cocotb-1.8.0 cocotb-coverage-1.1.0 find-libpython-0.4.0 markdown-it-py-3.0.0 mdurl-0.1.2 oyaml-1.0 pygments-2.18.0 python-constraint-1.4.0 rich-13.7.1 six-1.16.0 tabulate-0.9.0 wcwidth-0.2.13
+docker pull efabless/dv:cocotb
+cocotb: Pulling from efabless/dv
+3153aa388d02: Pulling fs layer 
+d5228064349b: Pull complete 
+46fa9e0cc8aa: Pull complete 
+7c4aa436b05e: Pull complete 
+f2fb9b433d42: Downloading [==============>                                    ]  16.05MB/56.84MB
+d53135f02529: Download complete 
+54eda94f6847: Download complete 
+02eb3d638028: Downloading [==>                                                ]  26.24MB/520.1MB
+f2fb9b433d42: Pull complete 
+d53135f02529: Pull complete 
+54eda94f6847: Pull complete 
+02eb3d638028: Pull complete 
+182b22a63d6c: Pull complete 
+f3b9bf098a9f: Pull complete 
+8390c31b2539: Pull complete 
+f6d666ddb25b: Pull complete 
+628d7834854e: Pull complete 
+0a5c962a11c8: Pull complete 
+034017c2445f: Pull complete 
+Digest: sha256:346213d0e7504640ed830928db9b01a7b64289ab0f4a6ca3a0e2904a9175acab
+Status: Downloaded newer image for efabless/dv:cocotb
+docker.io/efabless/dv:cocotb
+if [ -d "/home/ian/TEST_MIXER_JHONY/test_mixer/mpw_precheck" ]; then\
+        echo "Deleting exisiting /home/ian/TEST_MIXER_JHONY/test_mixer/mpw_precheck" && \
+        rm -rf /home/ian/TEST_MIXER_JHONY/test_mixer/mpw_precheck && sleep 2;\
+fi
+Installing Precheck..
+Clonando en '/home/ian/TEST_MIXER_JHONY/test_mixer/mpw_precheck'...
+remote: Enumerating objects: 226, done.
+remote: Counting objects: 100% (226/226), done.
+remote: Compressing objects: 100% (170/170), done.
+remote: Total 226 (delta 69), reused 149 (delta 47), pack-reused 0
+Recibiendo objetos: 100% (226/226), 10.40 MiB | 1.57 MiB/s, listo.
+Resolviendo deltas: 100% (69/69), listo.
+Nota: cambiando a 'eed8fb2c20ed33b8b1040052e983b3f52fcdb212'.
+
+Te encuentras en estado 'detached HEAD'. Puedes revisar por aquí, hacer
+cambios experimentales y hacer commits, y puedes descartar cualquier
+commit que hayas hecho en este estado sin impactar a tu rama realizando
+otro checkout.
+
+Si quieres crear una nueva rama para mantener los commits que has creado,
+puedes hacerlo (ahora o después) usando -c con el comando checkout. Ejemplo:
+
+  git switch -c <nombre-de-nueva-rama>
+
+O deshacer la operación con:
+
+  git switch -
+
+Desactiva este aviso poniendo la variable de config advice.detachedHead en false
+
+latest: Pulling from efabless/mpw_precheck
+2d473b07cdd5: Already exists 
+b0cc55c15c17: Pulling fs layer 
+7cd893633856: Pulling fs layer 
+645cb89d0537: Pulling fs layer 
+a88f50966349: Pulling fs layer 
+56445826e92e: Pulling fs layer 
+56958d6897c9: Pulling fs layer 
+4f4fb700ef54: Pulling fs layer 
+2cd4911ec294: Pull complete 
+ac679679beb0: Pull complete 
+227c7942e2ba: Pull complete 
+f9d722574bd0: Pull complete 
+6dbeca187ba1: Pull complete 
+47d782068167: Pull complete 
+fffaaeeaf7be: Pull complete 
+7ba1af338724: Pull complete 
+39a5be7bb58b: Pull complete 
+dac19c12c3f5: Pull complete 
+0b5f7401a836: Pull complete 
+89dd92422c11: Pull complete 
+388061b90790: Pull complete 
+5bea41102ad8: Pull complete 
+Digest: sha256:d3f16302a271377efbe53ecc7457a07e7e110cb56c2baf33f24e2ff7aa144725
+Status: Downloaded newer image for efabless/mpw_precheck:latest
+docker.io/efabless/mpw_precheck:latest
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+ *  Historial restaurado 
+
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make verify-test_mixer-rtl
+docker pull efabless/dv:latest
+Error response from daemon: Head "https://registry-1.docker.io/v2/efabless/dv/manifests/latest": Get "https://auth.docker.io/token?scope=repository%3Aefabless%2Fdv%3Apull&service=registry.docker.io": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+make: *** [Makefile:109: simenv] Error 1
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make verify-test_mixer-rtl
+docker pull efabless/dv:latest
+latest: Pulling from efabless/dv
+Digest: sha256:06497b070c8578fbbe87170c9f4dfa61c2c9a9d9f665a637c4d822ea98a7f1b7
+Status: Image is up to date for efabless/dv:latest
+docker.io/efabless/dv:latest
+docker run -u $(id -u $USER):$(id -g $USER) -v /home/ian/TEST_MIXER_JHONY/test_mixer:/home/ian/TEST_MIXER_JHONY/test_mixer -v /home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks:/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -v /home/ian/TEST_MIXER_JHONY/test_mixer/caravel:/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -v /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper:/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper -e TARGET_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer -e PDK_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -e CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -e TOOLS=/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937 -e DESIGNS=/home/ian/TEST_MIXER_JHONY/test_mixer -e USER_PROJECT_VERILOG=/home/ian/TEST_MIXER_JHONY/test_mixer/verilog -e PDK=sky130A -e CORE_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog -e CARAVEL_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog -e MCW_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper efabless/dv:latest sh -c "source ~/.bashrc && cd /home/ian/TEST_MIXER_JHONY/test_mixer/verilog/dv/test_mixer && export SIM=RTL && make"
+/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937/bin/riscv32-unknown-linux-gnu-gcc -g \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/generated \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/ \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/common \
+  -march=rv32i      -mabi=ilp32 -D__vexriscv__ \
+-Wl,-Bstatic,-T,/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware/sections.lds,--strip-debug \
+-ffreestanding -nostdlib -o test_mixer.elf /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware/crt0_vex.S /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware/isr.c test_mixer.c
+/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937/bin/riscv32-unknown-linux-gnu-objcopy -O verilog test_mixer.elf test_mixer.hex 
+# to fix flash base address
+sed -ie 's/@10/@00/g' test_mixer.hex
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUSE_POWER_PINS -DUNIT_DELAY=#1 \
+        -f /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper \
+        -o test_mixer.vvp /home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog/rtl/__user_project_wrapper.v test_mixer_tb.v
+iverilog: cannot open command file /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper for reading.
+make: *** [test_mixer.vvp] Error 1
+rm test_mixer.elf
+make: *** [Makefile:171: verify-test_mixer-rtl] Error 2
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make verify-test_mixer-rtl
+docker pull efabless/dv:latest
+latest: Pulling from efabless/dv
+Digest: sha256:06497b070c8578fbbe87170c9f4dfa61c2c9a9d9f665a637c4d822ea98a7f1b7
+Status: Image is up to date for efabless/dv:latest
+docker.io/efabless/dv:latest
+docker run -u $(id -u $USER):$(id -g $USER) -v /home/ian/TEST_MIXER_JHONY/test_mixer:/home/ian/TEST_MIXER_JHONY/test_mixer -v /home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks:/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -v /home/ian/TEST_MIXER_JHONY/test_mixer/caravel:/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -v /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper:/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper -e TARGET_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer -e PDK_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -e CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -e TOOLS=/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937 -e DESIGNS=/home/ian/TEST_MIXER_JHONY/test_mixer -e USER_PROJECT_VERILOG=/home/ian/TEST_MIXER_JHONY/test_mixer/verilog -e PDK=sky130A -e CORE_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog -e CARAVEL_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog -e MCW_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper efabless/dv:latest sh -c "source ~/.bashrc && cd /home/ian/TEST_MIXER_JHONY/test_mixer/verilog/dv/test_mixer && export SIM=RTL && make"
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUSE_POWER_PINS -DUNIT_DELAY=#1 \
+        -f /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper \
+        -o test_mixer.vvp /home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog/rtl/__user_project_wrapper.v test_mixer_tb.v
+iverilog: cannot open command file /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper for reading.
+make: *** [test_mixer.vvp] Error 1
+make: *** [Makefile:171: verify-test_mixer-rtl] Error 2
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make verify-test_mixer-rtl
+docker pull efabless/dv:latest
+latest: Pulling from efabless/dv
+Digest: sha256:06497b070c8578fbbe87170c9f4dfa61c2c9a9d9f665a637c4d822ea98a7f1b7
+Status: Image is up to date for efabless/dv:latest
+docker.io/efabless/dv:latest
+docker run -u $(id -u $USER):$(id -g $USER) -v /home/ian/TEST_MIXER_JHONY/test_mixer:/home/ian/TEST_MIXER_JHONY/test_mixer -v /home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks:/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -v /home/ian/TEST_MIXER_JHONY/test_mixer/caravel:/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -v /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper:/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper -e TARGET_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer -e PDK_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -e CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -e TOOLS=/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937 -e DESIGNS=/home/ian/TEST_MIXER_JHONY/test_mixer -e USER_PROJECT_VERILOG=/home/ian/TEST_MIXER_JHONY/test_mixer/verilog -e PDK=sky130A -e CORE_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog -e CARAVEL_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog -e MCW_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper efabless/dv:latest sh -c "source ~/.bashrc && cd /home/ian/TEST_MIXER_JHONY/test_mixer/verilog/dv/test_mixer && export SIM=RTL && make"
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUSE_POWER_PINS -DUNIT_DELAY=#1 \
+        -f /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper \
+        -o test_mixer.vvp /home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog/rtl/__user_project_wrapper.v test_mixer_tb.v
+iverilog: cannot open command file /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper for reading.
+make: *** [test_mixer.vvp] Error 1
+make: *** [Makefile:171: verify-test_mixer-rtl] Error 2
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ comment_lines_sky130_ef_io
+comment_lines_sky130_ef_io: orden no encontrada
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ comment_lines_defs_h
+comment_lines_defs_h: orden no encontrada
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make comment_lines_sky130_ef_io
+sed -i "1364,1365s/^/\/\//" "dependencies/pdks/sky130A/libs.ref/sky130_fd_io/verilog/sky130_ef_io.v"
+Lines 1364,1365 in dependencies/pdks/sky130A/libs.ref/sky130_fd_io/verilog/sky130_ef_io.v have been commented.
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make comment_lines_defs_h
+sed -i "273,274s/^/\/\//" "mgmt_core_wrapper/verilog/dv/firmware/defs.h"
+Lines 273,274 in mgmt_core_wrapper/verilog/dv/firmware/defs.h have been commented.
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make verify-test_mixer-rtl
+docker pull efabless/dv:latest
+latest: Pulling from efabless/dv
+Digest: sha256:06497b070c8578fbbe87170c9f4dfa61c2c9a9d9f665a637c4d822ea98a7f1b7
+Status: Image is up to date for efabless/dv:latest
+docker.io/efabless/dv:latest
+docker run -u $(id -u $USER):$(id -g $USER) -v /home/ian/TEST_MIXER_JHONY/test_mixer:/home/ian/TEST_MIXER_JHONY/test_mixer -v /home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks:/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -v /home/ian/TEST_MIXER_JHONY/test_mixer/caravel:/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -v /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper:/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper -e TARGET_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer -e PDK_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -e CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -e TOOLS=/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937 -e DESIGNS=/home/ian/TEST_MIXER_JHONY/test_mixer -e USER_PROJECT_VERILOG=/home/ian/TEST_MIXER_JHONY/test_mixer/verilog -e PDK=sky130A -e CORE_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog -e CARAVEL_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog -e MCW_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper efabless/dv:latest sh -c "source ~/.bashrc && cd /home/ian/TEST_MIXER_JHONY/test_mixer/verilog/dv/test_mixer && export SIM=RTL && make"
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUSE_POWER_PINS -DUNIT_DELAY=#1 \
+        -f /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper \
+        -o test_mixer.vvp /home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog/rtl/__user_project_wrapper.v test_mixer_tb.v
+iverilog: cannot open command file /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper for reading.
+make: *** [test_mixer.vvp] Error 1
+make: *** [Makefile:171: verify-test_mixer-rtl] Error 2
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make verify-test_mixer-rtl
+docker pull efabless/dv:latest
+latest: Pulling from efabless/dv
+Digest: sha256:06497b070c8578fbbe87170c9f4dfa61c2c9a9d9f665a637c4d822ea98a7f1b7
+Status: Image is up to date for efabless/dv:latest
+docker.io/efabless/dv:latest
+docker run -u $(id -u $USER):$(id -g $USER) -v /home/ian/TEST_MIXER_JHONY/test_mixer:/home/ian/TEST_MIXER_JHONY/test_mixer -v /home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks:/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -v /home/ian/TEST_MIXER_JHONY/test_mixer/caravel:/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -v /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper:/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper -e TARGET_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer -e PDK_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -e CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -e TOOLS=/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937 -e DESIGNS=/home/ian/TEST_MIXER_JHONY/test_mixer -e USER_PROJECT_VERILOG=/home/ian/TEST_MIXER_JHONY/test_mixer/verilog -e PDK=sky130A -e CORE_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog -e CARAVEL_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog -e MCW_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper efabless/dv:latest sh -c "source ~/.bashrc && cd /home/ian/TEST_MIXER_JHONY/test_mixer/verilog/dv/test_mixer && export SIM=RTL && make"
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUSE_POWER_PINS -DUNIT_DELAY=#1 \
+        -f /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper \
+        -o test_mixer.vvp /home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog/rtl/__user_project_wrapper.v test_mixer_tb.v
+iverilog: cannot open command file /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper for reading.
+make: *** [test_mixer.vvp] Error 1
+make: *** [Makefile:171: verify-test_mixer-rtl] Error 2
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make verify-test_mixer-rtl
+docker pull efabless/dv:latest
+latest: Pulling from efabless/dv
+Digest: sha256:06497b070c8578fbbe87170c9f4dfa61c2c9a9d9f665a637c4d822ea98a7f1b7
+Status: Image is up to date for efabless/dv:latest
+docker.io/efabless/dv:latest
+docker run -u $(id -u $USER):$(id -g $USER) -v /home/ian/TEST_MIXER_JHONY/test_mixer:/home/ian/TEST_MIXER_JHONY/test_mixer -v /home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks:/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -v /home/ian/TEST_MIXER_JHONY/test_mixer/caravel:/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -v /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper:/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper -e TARGET_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer -e PDK_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -e CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -e TOOLS=/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937 -e DESIGNS=/home/ian/TEST_MIXER_JHONY/test_mixer -e USER_PROJECT_VERILOG=/home/ian/TEST_MIXER_JHONY/test_mixer/verilog -e PDK=sky130A -e CORE_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog -e CARAVEL_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog -e MCW_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper efabless/dv:latest sh -c "source ~/.bashrc && cd /home/ian/TEST_MIXER_JHONY/test_mixer/verilog/dv/test_mixer && export SIM=RTL && make"
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUSE_POWER_PINS -DUNIT_DELAY=#1 \
+        -f /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper \
+        -o test_mixer.vvp /home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog/rtl/__user_project_wrapper.v test_mixer_tb.v
+iverilog: cannot open command file /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.user_analog_project_wrapper for reading.
+make: *** [test_mixer.vvp] Error 1
+make: *** [Makefile:171: verify-test_mixer-rtl] Error 2
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make verify-test_mixer-rtl
+docker pull efabless/dv:latest
+latest: Pulling from efabless/dv
+Digest: sha256:06497b070c8578fbbe87170c9f4dfa61c2c9a9d9f665a637c4d822ea98a7f1b7
+Status: Image is up to date for efabless/dv:latest
+docker.io/efabless/dv:latest
+docker run -u $(id -u $USER):$(id -g $USER) -v /home/ian/TEST_MIXER_JHONY/test_mixer:/home/ian/TEST_MIXER_JHONY/test_mixer -v /home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks:/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -v /home/ian/TEST_MIXER_JHONY/test_mixer/caravel:/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -v /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper:/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper -e TARGET_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer -e PDK_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -e CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -e TOOLS=/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937 -e DESIGNS=/home/ian/TEST_MIXER_JHONY/test_mixer -e USER_PROJECT_VERILOG=/home/ian/TEST_MIXER_JHONY/test_mixer/verilog -e PDK=sky130A -e CORE_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog -e CARAVEL_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog -e MCW_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper efabless/dv:latest sh -c "source ~/.bashrc && cd /home/ian/TEST_MIXER_JHONY/test_mixer/verilog/dv/test_mixer && export SIM=RTL && make"
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUSE_POWER_PINS -DUNIT_DELAY=#1 \
+        -f/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.caravel \
+        -f/home/ian/TEST_MIXER_JHONY/test_mixer/verilog/includes/includes.rtl.user_analog_project_wrapper -o test_mixer.vvp test_mixer_tb.v
+/home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog/rtl/caravan.v:291: warning: input port clock is coerced to inout.
+vvp  test_mixer.vvp
+Reading test_mixer.hex
+test_mixer.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+FST info: dumpfile test_mixer.vcd opened for output.
+uart_pulse state = 1 
+output (Decimal):         596
+uart_pulse state = 1 
+output (Decimal):         171
+uart_pulse state = 1 
+output (Decimal):         171
+uart_pulse state = 1 
+output (Decimal):         171
+uart_pulse state = 1 
+output (Decimal):         171
+Fin Test
+test_mixer_tb.v:106: $finish called at 8259712500 (1ps)
+mv test_mixer.vcd RTL-test_mixer.vcd
+/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937/bin/riscv32-unknown-linux-gnu-gcc -g \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/generated \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/ \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/common \
+  -march=rv32i      -mabi=ilp32 -D__vexriscv__ \
+-Wl,-Bstatic,-T,/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware/sections.lds,--strip-debug \
+-ffreestanding -nostdlib -o test_mixer.elf /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware/crt0_vex.S /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware/isr.c test_mixer.c
+/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937/bin/riscv32-unknown-linux-gnu-objdump -d -S test_mixer.elf > test_mixer.lst
+rm test_mixer.elf test_mixer.vvp
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+
+=============================EL UART ESTA CORRIENDO  =====================================================================
+
+
+
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make verify-test_mixer-rtl
+docker pull efabless/dv:latest
+latest: Pulling from efabless/dv
+Digest: sha256:06497b070c8578fbbe87170c9f4dfa61c2c9a9d9f665a637c4d822ea98a7f1b7
+Status: Image is up to date for efabless/dv:latest
+docker.io/efabless/dv:latest
+docker run -u $(id -u $USER):$(id -g $USER) -v /home/ian/TEST_MIXER_JHONY/test_mixer:/home/ian/TEST_MIXER_JHONY/test_mixer -v /home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks:/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -v /home/ian/TEST_MIXER_JHONY/test_mixer/caravel:/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -v /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper:/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper -e TARGET_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer -e PDK_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/pdks -e CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel -e TOOLS=/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937 -e DESIGNS=/home/ian/TEST_MIXER_JHONY/test_mixer -e USER_PROJECT_VERILOG=/home/ian/TEST_MIXER_JHONY/test_mixer/verilog -e PDK=sky130A -e CORE_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog -e CARAVEL_VERILOG_PATH=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog -e MCW_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper efabless/dv:latest sh -c "source ~/.bashrc && cd /home/ian/TEST_MIXER_JHONY/test_mixer/verilog/dv/test_mixer && export SIM=RTL && make"
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUSE_POWER_PINS -DUNIT_DELAY=#1 \
+        -f/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/includes/includes.rtl.caravel \
+        -f/home/ian/TEST_MIXER_JHONY/test_mixer/verilog/includes/includes.rtl.user_analog_project_wrapper -o test_mixer.vvp test_mixer_tb.v
+/home/ian/TEST_MIXER_JHONY/test_mixer/caravel/verilog/rtl/caravan.v:291: warning: input port clock is coerced to inout.
+vvp  test_mixer.vvp
+Reading test_mixer.hex
+test_mixer.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+FST info: dumpfile test_mixer.vcd opened for output.
+uart_pulse state = 1 
+output (Decimal):         596
+uart_pulse state = 1 
+output (Decimal):         171
+uart_pulse state = 1 
+output (Decimal):         171
+uart_pulse state = 1 
+output (Decimal):         171
+uart_pulse state = 1 
+output (Decimal):         171
+Fin Test
+test_mixer_tb.v:106: $finish called at 8259712500 (1ps)
+mv test_mixer.vcd RTL-test_mixer.vcd
+/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937/bin/riscv32-unknown-linux-gnu-gcc -g \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/generated \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/ \
+-I/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/common \
+  -march=rv32i      -mabi=ilp32 -D__vexriscv__ \
+-Wl,-Bstatic,-T,/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware/sections.lds,--strip-debug \
+-ffreestanding -nostdlib -o test_mixer.elf /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware/crt0_vex.S /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper/verilog/dv/firmware/isr.c test_mixer.c
+/foss/tools/riscv-gnu-toolchain-rv32i/217e7f3debe424d61374d31e33a091a630535937/bin/riscv32-unknown-linux-gnu-objdump -d -S test_mixer.elf > test_mixer.lst
+rm test_mixer.elf test_mixer.vvp
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+
+========================================================================================================================
+
+Parece que estás teniendo un problema al intentar ejecutar GTKWave debido a la falta de módulos de GTK y un problema con la biblioteca libpthread.so.0. Este problema puede deberse a una incompatibilidad entre la versión de GTKWave que estás utilizando y las bibliotecas de tu sistema.
+
+Aquí hay algunos pasos que puedes seguir para intentar resolver el problema:
+
+    Actualizar tu sistema: Asegúrate de que tu sistema operativo y todas las bibliotecas estén actualizadas.
+
+    bash
+
+sudo apt update
+sudo apt upgrade
+
+Reinstalar GTKWave: Intenta desinstalar y luego volver a instalar GTKWave.
+
+bash
+
+sudo apt remove gtkwave
+sudo apt install gtkwave
+
+Instalar los módulos faltantes de GTK: Los mensajes de error indican que los módulos "gail" y "atk-bridge" no se han cargado correctamente. Puedes intentar instalar estos módulos.
+
+bash
+
+sudo apt install libgail-common
+sudo apt install libatk-bridge2.0-0
+
+Verificar las bibliotecas: Puede haber un problema con la versión de libpthread.so.0 que está instalada. Intenta reinstalar la biblioteca libc6.
+
+bash
+
+sudo apt install --reinstall libc6
+
+Usar una versión diferente de GTKWave: Si los pasos anteriores no resuelven el problema, podrías intentar instalar GTKWave desde una fuente diferente, como una versión anterior o una compilación desde el código fuente.
+
+Para instalar desde una versión anterior:
+
+bash
+
+sudo apt-get install gtkwave=<versión_anterior>
+
+Para compilar desde el código fuente:
+
+bash
+
+    sudo apt-get install build-essential
+    sudo apt-get install libgtk-3-dev
+    wget http://gtkwave.sourceforge.net/gtkwave-3.3.111.tar.gz
+    tar xvfz gtkwave-3.3.111.tar.gz
+    cd gtkwave-3.3.111
+    ./configure
+    make
+    sudo make install
+
+Estos pasos deberían ayudarte a resolver el problema con GTKWave en tu sistema. Si sigues teniendo problemas, proporciona más detalles sobre tu sistema operativo y la versión específica de GTKWave que estás intentando usar.
+ChatGPT puede cometer errores. Comprueba la información import
+-------------------
+
+____________analisis de correr el test verify__CHATGPT_______________
+
+Reading test_mixer.hex
+test_mixer.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+FST info: dumpfile test_mixer.vcd opened for output.
+uart_pulse state = 1 
+output (Decimal):         596
+uart_pulse state = 1 
+output (Decimal):         171
+uart_pulse state = 1 
+output (Decimal):         171
+uart_pulse state = 1 
+output (Decimal):         171
+uart_pulse state = 1 
+output (Decimal):         171
+Fin Test
+test_mixer_tb.v:109: $finish called at 8259712500 (1ps)
+mv test_mixer.vcd RTL-test_mixer.vcd
+rm test_mixer.vvp
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$  que esta haciendo
+ChatGPT dijo:
+
+Parece que estás ejecutando una simulación en Verilog utilizando un testbench llamado test_mixer_tb.v. Aquí hay un desglose de lo que está ocurriendo:
+
+    Carga del archivo HEX
+        test_mixer.hex se carga en memoria, y los primeros 5 bytes leídos son 0x6f 0x00 0x00 0x0b 0x13.
+
+    Generación de una traza de simulación (VCD)
+        El simulador genera un archivo de volcado de señal (test_mixer.vcd), que es útil para visualizar la actividad de la simulación en herramientas como GTKWave.
+
+    Estados de uart_pulse y salidas en decimal
+        Se observa que uart_pulse state = 1 se repite varias veces, con una salida decimal de 596 al principio, seguida de 171 en varias ocasiones.
+
+    Finalización de la simulación
+        La simulación finaliza en test_mixer_tb.v en la línea 109 con la llamada $finish, indicando que ha completado su ejecución en un tiempo simulado de 8259712500 ps (8.26 ms).
+
+    Gestión de archivos de salida
+        Se mueve test_mixer.vcd a RTL-test_mixer.vcd, probablemente para organizar los resultados.
+        Se elimina test_mixer.vvp, que es el archivo intermedio generado por Icarus Verilog (iverilog).
+
+En resumen, estás ejecutando una prueba de un módulo llamado test_mixer, que lee datos de test_mixer.hex, simula el comportamiento de uart_pulse y genera una traza (VCD) para su análisis. ¿Buscas entender algún aspecto en particular de esta simulación?
+
+______________________________________________________________________________________________________
+
+PARA HACER CORRER EL UART APLICAMOS ESTOS DOS comando
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make verify-test_mixer-rtl
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer/verilog/dv/test_mixer$ gtkwave RTL-test_mixer.vcd
+//ESTE ULTIMO ES PARA VISUALIZAR EN GTKWAY
+

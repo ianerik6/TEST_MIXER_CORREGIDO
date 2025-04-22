@@ -1,0 +1,425 @@
+
+
+fatal: fetch-pack: salida de index-pack no válida
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ make setup
+if [ -d "/home/ian/TEST_MIXER_JHONY/test_mixer/caravel" ]; then\
+        echo "Deleting exisiting /home/ian/TEST_MIXER_JHONY/test_mixer/caravel" && \
+        rm -rf /home/ian/TEST_MIXER_JHONY/test_mixer/caravel && sleep 2;\
+fi
+Deleting exisiting /home/ian/TEST_MIXER_JHONY/test_mixer/caravel
+echo "Installing caravel-lite.."
+Installing caravel-lite..
+git clone -b mpw-9g https://github.com/efabless/caravel-lite /home/ian/TEST_MIXER_JHONY/test_mixer/caravel --depth=1
+Clonando en '/home/ian/TEST_MIXER_JHONY/test_mixer/caravel'...
+remote: Enumerating objects: 440, done.
+remote: Counting objects: 100% (440/440), done.
+remote: Compressing objects: 100% (300/300), done.
+remote: Total 440 (delta 135), reused 300 (delta 83), pack-reused 0
+Recibiendo objetos: 100% (440/440), 192.74 MiB | 1.02 MiB/s, listo.
+Resolviendo deltas: 100% (135/135), listo.
+Nota: cambiando a 'ed0d9c7ba8c4c418bff74cac037016db78da7272'.
+
+Te encuentras en estado 'detached HEAD'. Puedes revisar por aquí, hacer
+cambios experimentales y hacer commits, y puedes descartar cualquier
+commit que hayas hecho en este estado sin impactar a tu rama realizando
+otro checkout.
+
+Si quieres crear una nueva rama para mantener los commits que has creado,
+puedes hacerlo (ahora o después) usando -c con el comando checkout. Ejemplo:
+
+  git switch -c <nombre-de-nueva-rama>
+
+O deshacer la operación con:
+
+  git switch -
+
+Desactiva este aviso poniendo la variable de config advice.detachedHead en false
+
+Actualizando archivos: 100% (349/349), listo.
+export CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel && export MPW_TAG=mpw-9g && make -f /home/ian/TEST_MIXER_JHONY/test_mixer/caravel/Makefile check-env
+make[1]: se entra en el directorio '/home/ian/TEST_MIXER_JHONY/test_mixer'
+make[1]: No se hace nada para 'check-env'.
+make[1]: se sale del directorio '/home/ian/TEST_MIXER_JHONY/test_mixer'
+export CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel && export MPW_TAG=mpw-9g && make -f /home/ian/TEST_MIXER_JHONY/test_mixer/caravel/Makefile install_mcw
+make[1]: se entra en el directorio '/home/ian/TEST_MIXER_JHONY/test_mixer'
+if [ -d "/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper" ]; then \
+        echo "Deleting existing /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper" && \
+        rm -rf /home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper && sleep 2;\
+fi
+Installing mcw-litex-vexriscv..
+Clonando en '/home/ian/TEST_MIXER_JHONY/test_mixer/mgmt_core_wrapper'...
+remote: Enumerating objects: 847, done.
+remote: Counting objects: 100% (847/847), done.
+remote: Compressing objects: 100% (576/576), done.
+remote: Total 847 (delta 328), reused 638 (delta 257), pack-reused 0
+Recibiendo objetos: 100% (847/847), 442.56 MiB | 1.01 MiB/s, listo.
+Resolviendo deltas: 100% (328/328), listo.
+Nota: cambiando a '3222bd57445eb6e734f010b9bed369b53c6066fe'.
+
+Te encuentras en estado 'detached HEAD'. Puedes revisar por aquí, hacer
+cambios experimentales y hacer commits, y puedes descartar cualquier
+commit que hayas hecho en este estado sin impactar a tu rama realizando
+otro checkout.
+
+Si quieres crear una nueva rama para mantener los commits que has creado,
+puedes hacerlo (ahora o después) usando -c con el comando checkout. Ejemplo:
+
+  git switch -c <nombre-de-nueva-rama>
+
+O deshacer la operación con:
+
+  git switch -
+
+Desactiva este aviso poniendo la variable de config advice.detachedHead en false
+
+Actualizando archivos: 100% (770/770), listo.
+make[1]: se sale del directorio '/home/ian/TEST_MIXER_JHONY/test_mixer'
+cd openlane && make openlane
+make[1]: se entra en el directorio '/home/ian/TEST_MIXER_JHONY/test_mixer/openlane'
+if [ -d "/home/ian/TEST_MIXER_JHONY/test_mixer/openlane/../dependencies/openlane_src" ]; then\
+        echo "Deleting exisiting /home/ian/TEST_MIXER_JHONY/test_mixer/openlane/../dependencies/openlane_src" && \
+        rm -rf /home/ian/TEST_MIXER_JHONY/test_mixer/openlane/../dependencies/openlane_src && sleep 2; \
+        fi
+git clone https://github.com/The-OpenROAD-Project/OpenLane -b 2023.07.19-1 --depth=1 /home/ian/TEST_MIXER_JHONY/test_mixer/openlane/../dependencies/openlane_src && \
+        cd /home/ian/TEST_MIXER_JHONY/test_mixer/openlane/../dependencies/openlane_src && \
+        export OPENLANE_IMAGE_NAME=efabless/openlane:2023.07.19-1 && \
+        export IMAGE_NAME=efabless/openlane:2023.07.19-1 && \
+        make pull-openlane
+Clonando en '/home/ian/TEST_MIXER_JHONY/test_mixer/openlane/../dependencies/openlane_src'...
+remote: Enumerating objects: 427, done.
+remote: Counting objects: 100% (427/427), done.
+remote: Compressing objects: 100% (378/378), done.
+remote: Total 427 (delta 55), reused 200 (delta 17), pack-reused 0
+Recibiendo objetos: 100% (427/427), 8.25 MiB | 1.40 MiB/s, listo.
+Resolviendo deltas: 100% (55/55), listo.
+Nota: cambiando a '30ee1388932eb55a89ad84ee43997bfe3a386421'.
+
+Te encuentras en estado 'detached HEAD'. Puedes revisar por aquí, hacer
+cambios experimentales y hacer commits, y puedes descartar cualquier
+commit que hayas hecho en este estado sin impactar a tu rama realizando
+otro checkout.
+
+Si quieres crear una nueva rama para mantener los commits que has creado,
+puedes hacerlo (ahora o después) usando -c con el comando checkout. Ejemplo:
+
+  git switch -c <nombre-de-nueva-rama>
+
+O deshacer la operación con:
+
+  git switch -
+
+Desactiva este aviso poniendo la variable de config advice.detachedHead en false
+
+make[2]: se entra en el directorio '/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/openlane_src'
+Makefile:23: atención: la variable 'DOCKER_SWAP' no ha sido definida
+Makefile:26: atención: la variable 'DOCKER_MEMORY' no ha sido definida
+Makefile:42: atención: la variable 'ROUTING_CORES' no ha sido definida
+Makefile:84: atención: la variable 'STD_CELL_LIBRARY' no ha sido definida
+2023.07.19-1: Pulling from efabless/openlane
+2d473b07cdd5: Already exists 
+e1cbbee2397e: Pulling fs layer 
+70e8f6ff478a: Pulling fs layer 
+352fcbed802f: Pulling fs layer 
+ffd26f349b41: Pulling fs layer 
+35494e6eaa87: Pulling fs layer 
+3f5fe7bafa8d: Pulling fs layer 
+be7d8cb65024: Pulling fs layer 
+921f112c30b5: Pulling fs layer 
+ef9d012b4add: Pulling fs layer 
+93da3611422f: Pulling fs layer 
+79949c403a26: Pulling fs layer 
+ffd26f349b41: Waiting 
+35494e6eaa87: Waiting 
+3f5fe7bafa8d: Waiting 
+be7d8cb65024: Waiting 
+3dc8060a4a53: Pulling fs layer 
+683b20fbca27: Pull complete 
+b9e056b52fb0: Pull complete 
+6c5b6eb91b7e: Pull complete 
+11a468897c64: Pull complete 
+9fd20dc6ee4a: Pull complete 
+8c51c188f550: Pull complete 
+4cf217b5b227: Pull complete 
+eaaa873ba1c3: Pull complete 
+cc5c8eb7fd73: Pull complete 
+29d424c3ca7d: Pull complete 
+a1764e9008d2: Pull complete 
+d9413a10e34e: Pull complete 
+a5745dd661e2: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:735dcc4c1fe41a44d81b1477f79e480914ada7c201e42716f181e9fa26c5292b
+Status: Downloaded newer image for efabless/openlane:2023.07.19-1
+docker.io/efabless/openlane:2023.07.19-1
+make[2]: se sale del directorio '/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/openlane_src'
+make[1]: se sale del directorio '/home/ian/TEST_MIXER_JHONY/test_mixer/openlane'
+export CARAVEL_ROOT=/home/ian/TEST_MIXER_JHONY/test_mixer/caravel && export MPW_TAG=mpw-9g && make -f /home/ian/TEST_MIXER_JHONY/test_mixer/caravel/Makefile pdk-with-volare
+make[1]: se entra en el directorio '/home/ian/TEST_MIXER_JHONY/test_mixer'
+rm -rf ./venv
+python3 -m venv ./venv
+./venv/bin/python3 -m pip install --upgrade --no-cache-dir pip
+Requirement already satisfied: pip in ./venv/lib/python3.10/site-packages (22.0.2)
+Collecting pip
+  Downloading pip-24.1.1-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 1.5 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.0.2
+    Uninstalling pip-22.0.2:
+      Successfully uninstalled pip-22.0.2
+Successfully installed pip-24.1.1
+./venv/bin/python3 -m pip install --upgrade --no-cache-dir volare
+Collecting volare
+  Downloading volare-0.18.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting click<9,>=8.0.0 (from volare)
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting pyyaml<7,>=5 (from volare)
+  Downloading PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting rich<14,>=12 (from volare)
+  Downloading rich-13.7.1-py3-none-any.whl.metadata (18 kB)
+Collecting httpx>=0.22.0 (from volare)
+  Downloading httpx-0.27.0-py3-none-any.whl.metadata (7.2 kB)
+Collecting pcpp<2,>=1.2 (from volare)
+  Downloading pcpp-1.30-py2.py3-none-any.whl.metadata (23 kB)
+Collecting zstandard<1,>=0.19.0 (from volare)
+  Downloading zstandard-0.22.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.9 kB)
+Collecting anyio (from httpx>=0.22.0->volare)
+  Downloading anyio-4.4.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting certifi (from httpx>=0.22.0->volare)
+  Downloading certifi-2024.7.4-py3-none-any.whl.metadata (2.2 kB)
+Collecting httpcore==1.* (from httpx>=0.22.0->volare)
+  Downloading httpcore-1.0.5-py3-none-any.whl.metadata (20 kB)
+Collecting idna (from httpx>=0.22.0->volare)
+  Downloading idna-3.7-py3-none-any.whl.metadata (9.9 kB)
+Collecting sniffio (from httpx>=0.22.0->volare)
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx>=0.22.0->volare)
+  Downloading h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting markdown-it-py>=2.2.0 (from rich<14,>=12->volare)
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich<14,>=12->volare)
+  Downloading pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<14,>=12->volare)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting exceptiongroup>=1.0.2 (from anyio->httpx>=0.22.0->volare)
+  Downloading exceptiongroup-1.2.1-py3-none-any.whl.metadata (6.6 kB)
+Collecting typing-extensions>=4.1 (from anyio->httpx>=0.22.0->volare)
+  Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Downloading volare-0.18.1-py3-none-any.whl (35 kB)
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 968.3 kB/s eta 0:00:00
+Downloading httpx-0.27.0-py3-none-any.whl (75 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.6/75.6 kB 560.4 kB/s eta 0:00:00
+Downloading httpcore-1.0.5-py3-none-any.whl (77 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.9/77.9 kB 1.0 MB/s eta 0:00:00
+Downloading pcpp-1.30-py2.py3-none-any.whl (91 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 1.3 MB/s eta 0:00:00
+Downloading PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (705 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.5/705.5 kB 996.5 kB/s eta 0:00:00
+Downloading rich-13.7.1-py3-none-any.whl (240 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.7/240.7 kB 1.6 MB/s eta 0:00:00
+Downloading zstandard-0.22.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 1.4 MB/s eta 0:00:00
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 2.7 MB/s eta 0:00:00
+Downloading pygments-2.18.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 1.9 MB/s eta 0:00:00
+Downloading anyio-4.4.0-py3-none-any.whl (86 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 2.1 MB/s eta 0:00:00
+Downloading idna-3.7-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.8/66.8 kB 5.0 MB/s eta 0:00:00
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading certifi-2024.7.4-py3-none-any.whl (162 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.0/163.0 kB 2.8 MB/s eta 0:00:00
+Downloading exceptiongroup-1.2.1-py3-none-any.whl (16 kB)
+Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 5.3 MB/s eta 0:00:00
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Installing collected packages: pcpp, zstandard, typing-extensions, sniffio, pyyaml, pygments, mdurl, idna, h11, exceptiongroup, click, certifi, markdown-it-py, httpcore, anyio, rich, httpx, volare
+Successfully installed anyio-4.4.0 certifi-2024.7.4 click-8.1.7 exceptiongroup-1.2.1 h11-0.14.0 httpcore-1.0.5 httpx-0.27.0 idna-3.7 markdown-it-py-3.0.0 mdurl-0.1.2 pcpp-1.30 pygments-2.18.0 pyyaml-6.0.1 rich-13.7.1 sniffio-1.3.1 typing-extensions-4.12.2 volare-0.18.1 zstandard-0.22.0
+./venv/bin/volare enable 78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc
+Version 78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc not found locally, attempting to download…
+Downloading common.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+Downloading sky130_fd_io.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+Downloading sky130_fd_pr.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+Downloading sky130_fd_sc_hd.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+Downloading sky130_fd_sc_hvl.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+Downloading sky130_ml_xx_hd.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+Downloading sky130_sram_macros.tar.zst… ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+Version 78b7bc32ddb4b6f14f76883c2e2dc5b5de9d1cbc enabled for the sky130 PDK.
+make[1]: se sale del directorio '/home/ian/TEST_MIXER_JHONY/test_mixer'
+Clonando en '/home/ian/TEST_MIXER_JHONY/test_mixer/dependencies/timing-scripts'...
+remote: Enumerating objects: 765, done.
+remote: Counting objects: 100% (266/266), done.
+remote: Compressing objects: 100% (83/83), done.
+remote: Total 765 (delta 190), reused 227 (delta 183), pack-reused 499
+Recibiendo objetos: 100% (765/765), 2.47 MiB | 1.40 MiB/s, listo.
+Resolviendo deltas: 100% (521/521), listo.
+Ya está actualizado.
+rm -rf ./venv-cocotb
+python3 -m venv ./venv-cocotb
+./venv-cocotb/bin/python3 -m pip install --upgrade --no-cache-dir pip
+Requirement already satisfied: pip in ./venv-cocotb/lib/python3.10/site-packages (22.0.2)
+Collecting pip
+  Downloading pip-24.1.1-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 1.3 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.0.2
+    Uninstalling pip-22.0.2:
+      Successfully uninstalled pip-22.0.2
+Successfully installed pip-24.1.1
+./venv-cocotb/bin/python3 -m pip install --upgrade --no-cache-dir caravel-cocotb
+Collecting caravel-cocotb
+  Downloading caravel_cocotb-1.2.4-py3-none-any.whl.metadata (14 kB)
+Collecting PrettyTable (from caravel-cocotb)
+  Downloading prettytable-3.10.0-py3-none-any.whl.metadata (30 kB)
+Collecting PyYAML (from caravel-cocotb)
+  Downloading PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting anytree (from caravel-cocotb)
+  Downloading anytree-2.12.1-py3-none-any.whl.metadata (8.1 kB)
+Collecting click (from caravel-cocotb)
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting cocotb==1.8.0 (from caravel-cocotb)
+  Downloading cocotb-1.8.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting cocotb-coverage==1.1.0 (from caravel-cocotb)
+  Downloading cocotb_coverage-1.1.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting oyaml (from caravel-cocotb)
+  Downloading oyaml-1.0-py2.py3-none-any.whl.metadata (1.2 kB)
+Collecting rich (from caravel-cocotb)
+  Downloading rich-13.7.1-py3-none-any.whl.metadata (18 kB)
+Collecting tabulate (from caravel-cocotb)
+  Downloading tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+Collecting find-libpython (from cocotb==1.8.0->caravel-cocotb)
+  Downloading find_libpython-0.4.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting python-constraint (from cocotb-coverage==1.1.0->caravel-cocotb)
+  Downloading python-constraint-1.4.0.tar.bz2 (18 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting six (from anytree->caravel-cocotb)
+  Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting wcwidth (from PrettyTable->caravel-cocotb)
+  Downloading wcwidth-0.2.13-py2.py3-none-any.whl.metadata (14 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->caravel-cocotb)
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->caravel-cocotb)
+  Downloading pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->caravel-cocotb)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading caravel_cocotb-1.2.4-py3-none-any.whl (70 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.9/70.9 kB 1.9 MB/s eta 0:00:00
+Downloading cocotb-1.8.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 1.5 MB/s eta 0:00:00
+Downloading cocotb_coverage-1.1.0-py3-none-any.whl (31 kB)
+Downloading anytree-2.12.1-py3-none-any.whl (44 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 57.4 MB/s eta 0:00:00
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 1.2 MB/s eta 0:00:00
+Downloading oyaml-1.0-py2.py3-none-any.whl (3.0 kB)
+Downloading prettytable-3.10.0-py3-none-any.whl (28 kB)
+Downloading PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (705 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.5/705.5 kB 1.8 MB/s eta 0:00:00
+Downloading rich-13.7.1-py3-none-any.whl (240 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.7/240.7 kB 1.6 MB/s eta 0:00:00
+Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 3.0 MB/s eta 0:00:00
+Downloading pygments-2.18.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 1.6 MB/s eta 0:00:00
+Downloading find_libpython-0.4.0-py3-none-any.whl (8.7 kB)
+Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Building wheels for collected packages: python-constraint
+  Building wheel for python-constraint (pyproject.toml) ... done
+  Created wheel for python-constraint: filename=python_constraint-1.4.0-py2.py3-none-any.whl size=24060 sha256=7ba3a2b2ac33315865622ea44cd9bb5bc137121ae16915faf432477e44d38dd9
+  Stored in directory: /tmp/pip-ephem-wheel-cache-i2vkm6n5/wheels/2e/f2/2b/cb08b5fe129e4f69b7033061f256e5c551b0aa1160c2872aee
+Successfully built python-constraint
+Installing collected packages: wcwidth, python-constraint, find-libpython, tabulate, six, PyYAML, pygments, PrettyTable, mdurl, cocotb, click, oyaml, markdown-it-py, cocotb-coverage, anytree, rich, caravel-cocotb
+Successfully installed PrettyTable-3.10.0 PyYAML-6.0.1 anytree-2.12.1 caravel-cocotb-1.2.4 click-8.1.7 cocotb-1.8.0 cocotb-coverage-1.1.0 find-libpython-0.4.0 markdown-it-py-3.0.0 mdurl-0.1.2 oyaml-1.0 pygments-2.18.0 python-constraint-1.4.0 rich-13.7.1 six-1.16.0 tabulate-0.9.0 wcwidth-0.2.13
+docker pull efabless/dv:cocotb
+cocotb: Pulling from efabless/dv
+3153aa388d02: Pulling fs layer 
+d5228064349b: Pull complete 
+46fa9e0cc8aa: Pull complete 
+7c4aa436b05e: Pull complete 
+f2fb9b433d42: Downloading [==============>                                    ]  16.05MB/56.84MB
+d53135f02529: Download complete 
+54eda94f6847: Download complete 
+02eb3d638028: Downloading [==>                                                ]  26.24MB/520.1MB
+f2fb9b433d42: Pull complete 
+d53135f02529: Pull complete 
+54eda94f6847: Pull complete 
+02eb3d638028: Pull complete 
+182b22a63d6c: Pull complete 
+f3b9bf098a9f: Pull complete 
+8390c31b2539: Pull complete 
+f6d666ddb25b: Pull complete 
+628d7834854e: Pull complete 
+0a5c962a11c8: Pull complete 
+034017c2445f: Pull complete 
+Digest: sha256:346213d0e7504640ed830928db9b01a7b64289ab0f4a6ca3a0e2904a9175acab
+Status: Downloaded newer image for efabless/dv:cocotb
+docker.io/efabless/dv:cocotb
+if [ -d "/home/ian/TEST_MIXER_JHONY/test_mixer/mpw_precheck" ]; then\
+        echo "Deleting exisiting /home/ian/TEST_MIXER_JHONY/test_mixer/mpw_precheck" && \
+        rm -rf /home/ian/TEST_MIXER_JHONY/test_mixer/mpw_precheck && sleep 2;\
+fi
+Installing Precheck..
+Clonando en '/home/ian/TEST_MIXER_JHONY/test_mixer/mpw_precheck'...
+remote: Enumerating objects: 226, done.
+remote: Counting objects: 100% (226/226), done.
+remote: Compressing objects: 100% (170/170), done.
+remote: Total 226 (delta 69), reused 149 (delta 47), pack-reused 0
+Recibiendo objetos: 100% (226/226), 10.40 MiB | 1.57 MiB/s, listo.
+Resolviendo deltas: 100% (69/69), listo.
+Nota: cambiando a 'eed8fb2c20ed33b8b1040052e983b3f52fcdb212'.
+
+Te encuentras en estado 'detached HEAD'. Puedes revisar por aquí, hacer
+cambios experimentales y hacer commits, y puedes descartar cualquier
+commit que hayas hecho en este estado sin impactar a tu rama realizando
+otro checkout.
+
+Si quieres crear una nueva rama para mantener los commits que has creado,
+puedes hacerlo (ahora o después) usando -c con el comando checkout. Ejemplo:
+
+  git switch -c <nombre-de-nueva-rama>
+
+O deshacer la operación con:
+
+  git switch -
+
+Desactiva este aviso poniendo la variable de config advice.detachedHead en false
+
+latest: Pulling from efabless/mpw_precheck
+2d473b07cdd5: Already exists 
+b0cc55c15c17: Pulling fs layer 
+7cd893633856: Pulling fs layer 
+645cb89d0537: Pulling fs layer 
+a88f50966349: Pulling fs layer 
+56445826e92e: Pulling fs layer 
+56958d6897c9: Pulling fs layer 
+4f4fb700ef54: Pulling fs layer 
+2cd4911ec294: Pull complete 
+ac679679beb0: Pull complete 
+227c7942e2ba: Pull complete 
+f9d722574bd0: Pull complete 
+6dbeca187ba1: Pull complete 
+47d782068167: Pull complete 
+fffaaeeaf7be: Pull complete 
+7ba1af338724: Pull complete 
+39a5be7bb58b: Pull complete 
+dac19c12c3f5: Pull complete 
+0b5f7401a836: Pull complete 
+89dd92422c11: Pull complete 
+388061b90790: Pull complete 
+5bea41102ad8: Pull complete 
+Digest: sha256:d3f16302a271377efbe53ecc7457a07e7e110cb56c2baf33f24e2ff7aa144725
+Status: Downloaded newer image for efabless/mpw_precheck:latest
+docker.io/efabless/mpw_precheck:latest
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
+ian@ian-300E4C-300E5C-300E7C:~/TEST_MIXER_JHONY/test_mixer$ 
